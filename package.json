@@ -1,0 +1,51 @@
+{
+  "name": "yhey.me",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "start": "npm run serve & npm run watch",
+    "serve": "browser-sync start --files '*.html' --files 'css/*.css' --files 'js/bundle.js' --server",
+    "watch": "npm run watch-css & npm run watch-js",
+    "build": "npm run build-css & npm run build-js",
+    "watch-css": "stylus -w styl/style.styl -o css",
+    "build-css": "stylus styl/style.styl -o css && postcss autoprefixer --autoprefixer.browsers 'last 2 versions' -u cssnano -d css css/style.css",
+    "watch-js": "watchify js/main.js -o js/bundle.js -v",
+    "build-js": "browserify js/main.js | uglifyjs -cm > js/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuheiy/yhey.me.git"
+  },
+  "author": "Yuhei Yasuda <yuhei.yasuda1003@gmail.com> (http://yhey.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuheiy/yhey.me/issues"
+  },
+  "homepage": "http://yhey.me/",
+  "dependencies": {
+    "babel-polyfill": "^6.3.14",
+    "es6-promise": "^3.0.2",
+    "lodash.debounce": "^4.0.0",
+    "lodash.random": "^3.1.0",
+    "lodash.times": "^4.0.0",
+    "sanitize.css": "^3.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browser-sync": "^2.11.1",
+    "browserify": "^13.0.0",
+    "cssnano": "^3.4.0",
+    "postcss-cli": "^2.4.0",
+    "stylus": "^0.53.0",
+    "uglify-js": "^2.6.1",
+    "watchify": "^3.7.0"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  }
+}
