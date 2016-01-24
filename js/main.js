@@ -1,5 +1,4 @@
 'use strict';
-import 'es6-promise';
 import 'babel-polyfill';
 import loadingComplete from './loadingComplete';
 import fixFlexBox from './fixFlexBox';

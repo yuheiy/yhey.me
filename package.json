@@ -24,7 +24,6 @@
   "homepage": "http://yhey.me/",
   "dependencies": {
     "babel-polyfill": "^6.3.14",
-    "es6-promise": "^3.0.2",
     "lodash.debounce": "^4.0.0",
     "lodash.random": "^3.1.0",
     "lodash.times": "^4.0.0",
