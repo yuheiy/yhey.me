@@ -1,13 +1,13 @@
 'use strict';
 import 'babel-polyfill';
 import loadingComplete from './loadingComplete';
-import fixFlexBox from './fixFlexBox';
+import fixFlexbox from './fixFlexBox';
 import createFuture from './createFuture';
 import showCotents from './showContents';
 
 const init = () => {
   loadingComplete();
-  fixFlexBox();
+  fixFlexbox();
   createFuture();
   showCotents();
 };

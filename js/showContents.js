@@ -9,7 +9,7 @@ const showContent = el => {
 const wait = delay => new Promise(done => setTimeout(done, delay));
 
 export default function () {
-  const transparents = document.querySelectorAll('.transparent');
+  const transparents = document.querySelectorAll(`.${className}`);
   const {transitionDuration} = getComputedStyle(transparents[0]);
   const delay = parseFloat(transitionDuration) * 1000;
 
