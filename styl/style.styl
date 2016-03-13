@@ -3,13 +3,6 @@
 color-default = #999
 color-focus = #444
 
-@font-face
-  font-family 'Junge'
-  font-style normal
-  font-weight 400
-  src url('/font/Junge-Regular.woff2') format('woff2'),
-    url('/font/Junge-Regular.woff') format('woff')
-
 :root
   @media (min-width: 60rem)
     font-size 125%
@@ -22,11 +15,8 @@ html
 
 body
   position relative
-  font-family Georgia, serif
+  font-family 'Junge', 'Georgia', serif
   color color-default
-
-.junge
-  font-family 'Junge', serif
 
 a
   color inherit
@@ -35,13 +25,6 @@ a
 
   &:hover
     color color-focus
-
-.loading
-  position fixed
-  right 50%
-  bottom 50%
-  transform translate(50%,50%)
-  pointer-events none
 
 @import '_layout'
 @import '_title'
