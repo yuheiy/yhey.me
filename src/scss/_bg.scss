@@ -1,0 +1,14 @@
+.bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  max-width: 50%;
+  height: 100%;
+  text-align: right;
+
+  > img {
+    height: 100%;
+    opacity: .5;
+  }
+}

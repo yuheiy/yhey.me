@@ -1,0 +1,20 @@
+.footer {
+  @extend %container;
+
+  margin-top: $margin-large;
+  margin-bottom: $margin-medium;
+}
+
+.flat-list {
+  text-align: center;
+  list-style: none;
+
+  > li {
+    display: inline-block;
+
+    &:not(:last-child)::after {
+      content: " ・ ";
+      opacity: $opacity-quiet;
+    }
+  }
+}

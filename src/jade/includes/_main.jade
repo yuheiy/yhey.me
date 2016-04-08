@@ -1,0 +1,33 @@
+include ../mixins/_project-list
+
+div.main
+  header
+    h1= title
+    p
+      time(datetime="1995-10-03") 95年
+      | 生まれ、淡路島育ちです。大阪に住んでいます。
+    p フロントエンドエンジニアになりたい人です。
+
+  section
+    h1 Blog
+
+    div#blog-list
+      ul.post-list
+        li Now Loading ...
+
+  section
+    h1 Personal Projects
+
+    +project-list({
+      title: 'drawing chat',
+      description: 'canvasとweb socketで動くお絵かきチャットです。開発中です。',
+      href: 'https://frozen-garden-49919.herokuapp.com/'
+    }, {
+      title: 'Website Gallery',
+      description: '気になったWebデザインを集めています。',
+      href: 'https://gallery.yhey.me/'
+    }, {
+      title: 'simple-url-dispatcher',
+      description: 'The dispatcher to divide methods of client-side JavaScript according to URL.',
+      href: 'https://github.com/yuheiy/simple-url-dispatcher'
+    })

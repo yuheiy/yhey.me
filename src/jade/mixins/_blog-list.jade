@@ -1,0 +1,10 @@
+mixin blog-list(items)
+  ol.post-list
+    each item in items
+      li
+        dl
+          dt
+            a(href= item.href)= item.title
+          dd
+            = item.content
+            time(datetime= item.dateTime)= item.published

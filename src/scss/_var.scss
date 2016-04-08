@@ -1,0 +1,30 @@
+$color-dark: #4c4c4c;
+$color-light: #fefefe;
+
+$opacity-quiet: .6;
+
+$font-stack-sans-serif: -apple-system, "Segoe UI", sans-serif;
+
+$line-height: 1.8;
+
+$indent: $line-height * 1rem;
+
+$text-small: .8rem;
+$text-large: 1.6rem;
+
+$margin-small: 1rem;
+$margin-medium: 3rem;
+$margin-large: $margin-medium * 3;
+
+$padding-base: 1rem;
+
+$break-point: 60rem;
+
+$width-content: 80rem;
+$width-content-half: $width-content / 2;
+
+// for sanitize
+$root-background-color: $color-light;
+$root-color: $color-dark;
+$root-line-height: $line-height;
+$root-font-family: $font-stack-sans-serif;

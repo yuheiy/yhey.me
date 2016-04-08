@@ -1,0 +1,33 @@
+.main {
+  @extend %container;
+
+  max-width: $width-content-half;
+
+  @media (min-width: $break-point) {
+    margin-right: 50%;
+  }
+}
+
+.post-list {
+  padding-left: $indent;
+  list-style-type: disc;
+
+  > li:not(:first-child) {
+    margin-top: $margin-small;
+  }
+
+  dd {
+    @extend %ellipsis;
+
+    font-size: $text-small;
+    opacity: $opacity-quiet;
+  }
+
+  time {
+    display: block;
+
+    &::before {
+      content: "Published on ";
+    }
+  }
+}
