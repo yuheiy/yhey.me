@@ -1,6 +1,10 @@
 'use strict';
 require('es6-promise');
+require('./array.from-polyfill');
+const delayLoadImages = require('./delay-load-images');
 const {fetchEntries, EntryListRenderer} = require('./load-feed-entries');
+
+delayLoadImages();
 
 const onLoad = () => {
   const feedURL = 'http://yuheiy.hatenablog.com/rss';
