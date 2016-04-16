@@ -1,12 +1,10 @@
 'use strict';
 require('es6-promise');
 require('./array.from-polyfill');
-const delayLoadImages = require('./delay-load-images');
 const {fetchEntries, EntryListRenderer} = require('./load-feed-entries');
+const delayLoadImages = require('./delay-load-images');
 
-delayLoadImages();
-
-const onLoad = () => {
+const feedInit = () => {
   const feedURL = 'http://yuheiy.hatenablog.com/rss';
   const showEntriesCount = 5;
   const list = document.getElementById('blog-list');
@@ -18,4 +16,6 @@ const onLoad = () => {
 };
 
 google.load('feeds', '1');
-google.setOnLoadCallback(onLoad);
+google.setOnLoadCallback(feedInit);
+
+delayLoadImages();
