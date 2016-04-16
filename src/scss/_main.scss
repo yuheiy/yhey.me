@@ -31,3 +31,12 @@
     }
   }
 }
+
+.readmore {
+  margin-top: $margin-small;
+  text-align: right;
+
+  > a::before {
+    content: "⇒ ";
+  }
+}
