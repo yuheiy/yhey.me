@@ -6,7 +6,7 @@
     "serve": "browser-sync start --files 'dist' --server dist",
     "clean": "del 'dist' && git clone -b gh-pages https://github.com/yuheiy/yhey.me.git dist && del 'dist/**' '!dist' '!dist/.git'",
     "copy": "ncp src/public dist",
-    "jade": "jade src/jade/[!_]*.jade -o dist",
+    "jade": "jade src/[!_]*.jade -o dist",
     "sass": "node-sass src/scss -o dist/css",
     "build:html": "npm run jade",
     "build:css": "npm run sass -- --output-style compressed",
