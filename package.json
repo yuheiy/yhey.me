@@ -17,7 +17,8 @@
     "watch:js": "mkdirp dist/js && watchify src/js/main.js -o dist/js/main.js -d -v",
     "watch": "npm-run-all --parallel serve copy watch:*",
     "deploy": "cd dist/ && git push origin gh-pages",
-    "predeploy": "npm run build && cd dist/ && git add --all && git commit -m 'Build'"
+    "predeploy": "npm run build && cd dist/ && git add --all && git commit -m 'Build'",
+    "postinstall": "npm run clean"
   },
   "browserify": {
     "transform": [
