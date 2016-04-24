@@ -7,7 +7,7 @@ const delayLoadImages = require('./delay-load-images');
 const feedInit = () => {
   const feedURL = 'http://yuheiy.hatenablog.com/rss';
   const showEntriesCount = 5;
-  const list = document.getElementById('blog-list');
+  const list = document.getElementById('entry-list');
   const renderer = new EntryListRenderer(list);
 
   fetchEntries(feedURL, showEntriesCount)

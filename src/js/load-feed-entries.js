@@ -1,6 +1,6 @@
 'use strict';
 const moment = require('moment');
-const template = require('./templates/blog-list.jade');
+const template = require('./templates/entry-list.jade');
 
 const fetchEntries = (url, count) => {
   return new Promise((done, fail) => {
