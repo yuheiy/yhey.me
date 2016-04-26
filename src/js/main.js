@@ -4,7 +4,7 @@ require('./array.from-polyfill');
 const {fetchEntries, EntryListRenderer} = require('./load-feed-entries');
 const delayLoadImages = require('./delay-load-images');
 
-const feedInit = () => {
+const initFeed = () => {
   const feedURL = 'http://yuheiy.hatenablog.com/rss';
   const showEntriesCount = 5;
   const list = document.getElementById('entry-list');
@@ -15,7 +15,11 @@ const feedInit = () => {
     .catch(err => console.error(err.message));
 };
 
-google.load('feeds', '1');
-google.setOnLoadCallback(feedInit);
+const init = () => {
+  google.load('feeds', '1');
+  google.setOnLoadCallback(initFeed);
 
-delayLoadImages();
+  delayLoadImages();
+};
+
+init();
