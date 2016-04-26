@@ -1,9 +1,8 @@
 .main {
   @extend %container;
 
-  max-width: $width-content-half;
-
   @media (min-width: $break-point) {
+    max-width: $width-content-half;
     margin-right: 50%;
   }
 }
