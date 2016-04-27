@@ -1,31 +1,21 @@
 'use strict';
+const once = require('./once');
 
 const delayLoadImage = (image, index = 0) => {
+  const initialDelay = 1000;
   const interval = 500;
   const {src} = image.dataset;
-  let timeout = null;
-  let isCalled = false;
-  const loadImage = () => {
-    if (isCalled) {
-      return;
-    }
-
+  const loadImage = once(() => {
     image.src = src;
     image.style.transition = 'opacity .8s ease';
     image.style.opacity = '';
-
-    if (timeout) {
-      clearTimeout(timeout);
-      timeout = null;
-    }
-    isCalled = true;
-  };
+  });
   const preloader = new Image();
 
   image.style.opacity = 0;
   preloader.addEventListener('load', loadImage);
   preloader.src = src;
-  timeout = setTimeout(loadImage, interval * (index + 1));
+  setTimeout(loadImage, initialDelay + (interval * index));
 };
 
 const delayLoadImages = () => {
