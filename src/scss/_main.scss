@@ -23,10 +23,9 @@
   }
 
   time {
-    display: block;
-
     &::before {
-      content: "Published on ";
+      content: "\APublished on ";
+      white-space: pre;
     }
   }
 }
